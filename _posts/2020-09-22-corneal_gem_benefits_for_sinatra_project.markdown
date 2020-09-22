@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Corneal Gem Benefits for Sinatra Project"
-date:       2020-09-22 16:31:18 +0000
+date:       2020-09-22 12:31:19 -0400
 permalink:  corneal_gem_benefits_for_sinatra_project
 ---
 
@@ -12,7 +12,8 @@ Since the entire process of an app is, well, complicated- this added helper take
 
 Below is the basic file structure provided by this gem once you open your file:
 
-``── config.ru
+```
+── config.ru
 ├── Gemfile
 ├── Gemfile.lock
 ├── Rakefile
@@ -38,7 +39,9 @@ Below is the basic file structure provided by this gem once you open your file:
 |       └── main.css
 └── spec
     ├── application_controller_spec.rb
-    └── spec_helper.rb``
+    └── spec_helper.rb
+```
+
 		
 		
 		
@@ -46,7 +49,8 @@ The gem provides an already a built in file structure including all of your MVC 
 
 Below is the pre-built CSS file:
 
-``@media screen {
+```
+@media screen {
   /* --- Reset Styles --- */
   * {
     list-style: none;
@@ -160,13 +164,15 @@ Below is the pre-built CSS file:
     font-size: 18px;
     line-height: 24px;
   }
-}``
+}
+```
 
 Not only does the folder and file structure appear for you, but the majority of the leg work within some of the pertinent files is also already completed.  This allows a more seamless transition to begin working on your project.
 
 Below is the gemfile layout.  This has essentially everything necessary for a working website- you can add gems as needed while working through your application:
 
-``gem 'sinatra'
+```
+gem 'sinatra'
 gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
@@ -183,12 +189,15 @@ group :test do
   gem 'capybara'
   gem 'rack-test'
   gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
-end``
+end
+```
+
 
 
 Environment.rb with everything you will need:
 
-``ENV['SINATRA_ENV'] ||= "development"
+```
+ENV['SINATRA_ENV'] ||= "development"
 
 require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
@@ -199,26 +208,34 @@ ActiveRecord::Base.establish_connection(
 )
 
 require './app/controllers/application_controller'
-require_all 'app'``
+require_all 'app'
+```
+
 
 
 Below is the set up of the config.ru file- here you will only need to add whatever controllers you are using:
 
-``require './config/environment'
+```
+require './config/environment'
 
 if ActiveRecord::Migrator.needs_migration?
   raise 'Migrations are pending. Run `rake db:migrate` to resolve the issue.'
 end
 
-run ApplicationController``
+run ApplicationController
+```
+
 
 
 Also, the below Rakefile will populate as well:
 
-``ENV["SINATRA_ENV"] ||= "development"
+```
+ENV["SINATRA_ENV"] ||= "development"
 
 require_relative './config/environment'
-require 'sinatra/activerecord/rake'``
+require 'sinatra/activerecord/rake'
+```
+
 
 Ultimately, if you are given the option, this is a great tool to speed up the initial process of creating your app.  It allows you to focus on the MVC structure that will get your application functioning, and you will most likely thank this app for giving you that extra time back - (you will need it).
 
