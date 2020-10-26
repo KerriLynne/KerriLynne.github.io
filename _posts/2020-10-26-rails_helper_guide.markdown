@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Helper Guide"
-date:       2020-10-26 22:39:51 +0000
+date:       2020-10-26 18:39:52 -0400
 permalink:  rails_helper_guide
 ---
 
@@ -13,10 +13,12 @@ After working through some labs and lessons, the one thing I learned (quickly) w
 Generators- Generators are used to build out standard features of certain parts of your rails application.  For all generators, you will type ```rails g``` or ```rails generator``` followed by your command.  Your commands will differ depending on what you're working on, what you will need and what has already been created.  
 
 Resource generator- a great command to begin with that does alot for you; creates a new model, corresponding database table, controller, and an empty views folder:
+
 ```rails g resource ModelName column_name:datatype column_name2:datatype``` 
 
 Migration Generators:
 Creating a migration - used to create just a table and columns/ data types within:
+
 ```rails g migration CreateTable name_of_column:datatype name_of_column2:datatype```
 
 Adding a column- used to add a new column with a data type to an existing table:
