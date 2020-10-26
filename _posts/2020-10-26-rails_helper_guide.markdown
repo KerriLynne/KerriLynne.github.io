@@ -45,7 +45,7 @@ rails generate controller Controller_name method
 
 
 
-Routes- Creating routes is a new experience when moving to rails, below is some syntax for resources that cover most of your bases:
+Routes- Creating routes is a new experience when moving to rails, below is some syntax for resources that cover most of your bases:  
 This syntax is used to provide all routes for a controller:
 ```
 resources :controller_name
