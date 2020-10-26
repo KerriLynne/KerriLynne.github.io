@@ -237,7 +237,7 @@ require 'sinatra/activerecord/rake'
 ```
 
 
-Ultimately, if you are given the option, this is a great tool to speed up the initial process of creating your app.  It allows you to focus on the MVC structure that will get your application functioning, and you will most likely thank this app for giving you that extra time back - (you will need it).
+Ultimately, if you are given the option, this is a great tool to speed up the initial process of creating your app.  It allows you to focus on the MVC structure that will get your application functioning, and you will most likely thank this gem for giving you that extra time back - (you will need it).
 
 
 
