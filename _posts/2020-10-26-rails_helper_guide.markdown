@@ -25,50 +25,86 @@ Creating a migration - used to create just a table and columns/ data types withi
 rails g migration CreateTable name_of_column:datatype name_of_column2:datatype
 ```
 
-
 Adding a column- used to add a new column with a data type to an existing table:
-```rails g migration add_name_of_column_to_table_name name_of_column:datatype```
+
+```
+rails g migration add_name_of_column_to_table_name name_of_column:datatype
+```
 
 Removing a column- used to remove an existing column from an existing table:
-```rails g migration remove_name_of_column_from_table_name name_of_column:datatype```
+
+```
+rails g migration remove_name_of_column_from_table_name name_of_column:datatype
+```
 
 Model generator- used to create just a model with a corresponding table:
-```rails g model NameOfModel column_name:datatype column_name2:datatype ```
+
+```
+rails g model NameOfModel column_name:datatype column_name2:datatype 
+```
 
 Controller generator- used to create just a controller but can add in a method like 'new' or 'index' and the specified methods will be auto created:
-```rails generate controller Controller_name method ```
+
+```
+rails generate controller Controller_name method
+``` 
 
 
 Routes- Creating routes is a new experience when moving to rails, below is some syntax for resources that cover most of your bases:
 This syntax is used to provide all routes for a controller:
-```resources :controller_name```
+
+```
+resources :controller_name
+```
 
 This syntax will provide specific routes that you choose (you might not need all given routes for everything):
-```resources :controller_name, only: [:new, :create]```
+
+```
+resources :controller_name, only: [:new, :create]
+```
 
 This syntax will provide nested routes expressing a dependent relationship:
-``` resources :parent_controller_name do 
-resources :child_controller_name end```
+
+```
+resources :parent_controller_name do 
+resources :child_controller_name end
+```
 
 This syntax is used for custom routes based on your methods in your controllers. You can specify the route the method should go to:
-```get '/login', to: 'sessions#new'```
+
+```
+get '/login', to: 'sessions#new'
+```
 
 Remembering the exact paths to all of your routes can get challenging during a project.  The below command will list out all of the routes available to you so you can review all of the paths, verbs, URI patterns or controller actions each route is linking to:
-```rails routes ```
+
+```
+rails routes
+```
 
 You can also view the route info on your server which is usually larger and more readable:
+
 http://localhost:3000/rails/info/routes
 
 To view the routes only belonging to one resource, use this command in your terminal:
-```rake routes | grep resource_name```
+
+```
+rake routes | grep resource_name
+```
 
 
 You might accidentally run another server while working in your application and your server will no longer work:
 This command will show you the additional servers that are running:
-```lsof -wni tcp:3000```
+
+```
+lsof -wni tcp:3000
+```
 
 Use the PID number that the above command will return, and then run this command:
-```kill -9 PID```
+
+```
+kill -9 PID
+```
 
 
 Hopefully this will save you from doing extra googling or looking back to your notes.  Having necessary rails notes at hand are perfect for moving you through at least your first project.
