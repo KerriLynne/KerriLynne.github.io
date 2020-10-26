@@ -17,7 +17,7 @@ Resource generator- a great command to begin with that does alot for you; creat
 rails g resource ModelName column_name:datatype column_name2:datatype
 ```
 
-Migration Generators:
+Migration generators:
 Creating a migration - used to create just a table and columns/ data types within:
 ```
 rails g migration CreateTable name_of_column:datatype name_of_column2:datatype
