@@ -39,9 +39,11 @@ After being introduced to JavaScript, concepts can seem pretty foreign to a new 
 * implicit return (can use return but don’t need it)
 * more intuitive scoping and `this` binding.
 
-```hello = () => {
+```
+hello = () => {
   return "Hello World!";
-  }```
+  }
+```
 
 **Hoisting** - JavaScript hoisting occurs during the creation phase of the execution context that moves the variable and function declarations to the top of the script.  The JavaScript engine hoists the variables declared using the let keyword but it doesn’t initialize them as the variables declared with the var keyword.  Function expressions and arrow functions aren’t hoisted.
 
