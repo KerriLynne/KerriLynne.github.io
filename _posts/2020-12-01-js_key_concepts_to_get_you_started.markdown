@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JS Key Concepts to Get You Started"
-date:       2020-12-01 21:07:25 +0000
+date:       2020-12-01 16:07:26 -0500
 permalink:  js_key_concepts_to_get_you_started
 ---
 
