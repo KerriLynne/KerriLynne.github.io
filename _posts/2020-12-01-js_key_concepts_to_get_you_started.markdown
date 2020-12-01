@@ -36,13 +36,12 @@ After being introduced to JavaScript, concepts can seem pretty foreign to a new 
 **Arrow Functions** - a new feature introduced in ES6 that is a more concise syntax for writing function expressions. While both regular JavaScript functions and arrow functions work in a similar manner, below are some benefits of arrow functions:
 * same result, fewer lines of code
 * if only one argument parenthesis aren’t required
-* more intuitive scoping and `this` binding.
 * implicit return (can use return but don’t need it)
+* more intuitive scoping and `this` binding.
 
-
-    hello = () => {
-      return "Hello World!";
-    }
+```hello = () => {
+  return "Hello World!";
+  }```
 
 **Hoisting** - JavaScript hoisting occurs during the creation phase of the execution context that moves the variable and function declarations to the top of the script.  The JavaScript engine hoists the variables declared using the let keyword but it doesn’t initialize them as the variables declared with the var keyword.  Function expressions and arrow functions aren’t hoisted.
 
